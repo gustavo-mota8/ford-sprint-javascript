@@ -43,12 +43,8 @@ function Enviar(event) {
         alert('Obrigado sr(a) ' + data.nome + ' os seus dados foram encaminhados com sucesso');
         form.reset();
 
-    console.log(data.nome);
-    console.log(data.email)
-    console.log(data.cpf);
-    console.log(data.sobrenome);
-    console.log(data.telefone);
-    console.log(data.contato);
+    console.log(data);
+    
 
     }   
 
