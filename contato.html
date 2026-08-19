@@ -38,7 +38,7 @@
             </div>
             <div>
                 <h2 class="titulo">Sobre Você</h2>
-            <form onsubmit="Enviar(event)" id="form">
+            <form onsubmit="Enviar(event);" id="form">
                 <input type="text" id="nomeid" name="nome" placeholder="NOME*" class="fordform" required>
                 <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
                 <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
@@ -49,7 +49,19 @@
                     <option>TELEFONE</option>
                     <option>E-MAIL</option>
                 </select>
-            <button type="submit">Enviar</button>
+                <p class="texto-lgpd">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
+                qualquer momento, será possível editar ou remover tais dados. </p>
+
+                
+                <input id="termos" type="checkbox" name="primeiro">   
+                <label for="primeiro">Sim. Li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/" target="blank">Termos e Condições.</a></label>
+                <br>
+                <input type="checkbox" name="segundo">
+                <label for="segundo">Sim. Também quero receber descontos e novidades. </label>
+                
+                <div class="botao">
+                <button id="btnEnviar" type="submit" disabled>Enviar </button>
+                </div>
             </form>
             </div>
         </div>
@@ -67,5 +79,21 @@
            <img src="img/ford-96.png" width="70"  />
         </div>
     </footer>    
+
+        <script>
+
+        var check = document.getElementById("termos");
+        var botao = document.getElementById("btnEnviar"); 
+
+        
+        check.addEventListener("change", function() {
+
+        botao.disabled = !check.checked;
+     
+        });
+
+        </script>
+
+
 </body>
 </html>

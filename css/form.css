@@ -46,9 +46,28 @@ button {
     width: 200px;
     height: 40px;
     margin-right: 8px;
-    float: right;
+    float: center;
+
 }
 
 .titulo {
     margin-left: 8px;
 }
+
+.texto-lgpd {
+
+    margin-left: 10px;
+    width: 320px;
+    color: #807d7d;
+    margin-bottom: 10px;
+}
+
+
+.botao {
+
+    display: flex;
+    float: none;
+    justify-content: right;
+
+}
+

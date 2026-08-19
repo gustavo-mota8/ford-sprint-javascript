@@ -25,7 +25,7 @@ function Post(form) {
             form.elements.namedItem("telefone").value, 
             form.elements.namedItem("contato").value)
 
-            return data;
+        return data;
 
 }
 
@@ -33,21 +33,25 @@ function Post(form) {
 
 function Enviar(event) {     
 
+
     event.preventDefault();
 
-    const form = event.target;
+    var form = event.target;
 
-    let data = Post(form);  
+    var data = Post(form);
+
+    var nome = document.querySelector("#nomeid");
 
     if (data.nome != "") {
         alert('Obrigado sr(a) ' + data.nome + ' os seus dados foram encaminhados com sucesso');
         form.reset();
 
-    console.log(data);
-    
+        console.log(data);
 
     }   
 
-
-
 }
+
+
+
+
